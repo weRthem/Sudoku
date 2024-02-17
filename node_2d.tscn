@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=3 uid="uid://deae8qdyvfa2q"]
+
+[ext_resource type="Texture2D" uid="uid://byqp87r1smxab" path="res://Sprites/icon.svg" id="1_2fflj"]
+[ext_resource type="Script" path="res://Sprite2D.cs" id="2_mshfa"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(650, 267)
+texture = ExtResource("1_2fflj")
+script = ExtResource("2_mshfa")
+rotationSpeed = 100.0
