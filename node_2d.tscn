@@ -1,12 +1,130 @@
-[gd_scene load_steps=3 format=3 uid="uid://deae8qdyvfa2q"]
+[gd_scene load_steps=4 format=3 uid="uid://deae8qdyvfa2q"]
 
-[ext_resource type="Texture2D" uid="uid://byqp87r1smxab" path="res://Sprites/icon.svg" id="1_2fflj"]
-[ext_resource type="Script" path="res://Sprite2D.cs" id="2_mshfa"]
+[ext_resource type="Script" path="res://Scripts/BoardController.cs" id="1_gevof"]
+[ext_resource type="PackedScene" uid="uid://dbvb6fa31otvs" path="res://board_chunk.tscn" id="2_fhcfe"]
+[ext_resource type="Script" path="res://Scripts/SudokuButton.cs" id="3_d4dfr"]
 
 [node name="Node2D" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-position = Vector2(650, 267)
-texture = ExtResource("1_2fflj")
-script = ExtResource("2_mshfa")
-rotationSpeed = 100.0
+[node name="BoardController" type="Node2D" parent="."]
+position = Vector2(177, 44)
+script = ExtResource("1_gevof")
+boardChunk = ExtResource("2_fhcfe")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Button" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_top = -44.0
+offset_right = 46.0
+grow_vertical = 0
+text = "1"
+script = ExtResource("3_d4dfr")
+buttonNumber = 1
+boardController = NodePath("../../BoardController")
+
+[node name="Button2" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 46.0
+offset_top = -44.0
+offset_right = 92.0
+grow_vertical = 0
+text = "2"
+script = ExtResource("3_d4dfr")
+buttonNumber = 2
+boardController = NodePath("../../BoardController")
+
+[node name="Button3" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 92.0
+offset_top = -44.0
+offset_right = 138.0
+grow_vertical = 0
+text = "3"
+script = ExtResource("3_d4dfr")
+buttonNumber = 3
+boardController = NodePath("../../BoardController")
+
+[node name="Button4" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 138.0
+offset_top = -44.0
+offset_right = 184.0
+grow_vertical = 0
+text = "4"
+script = ExtResource("3_d4dfr")
+buttonNumber = 4
+boardController = NodePath("../../BoardController")
+
+[node name="Button5" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 184.0
+offset_top = -44.0
+offset_right = 230.0
+grow_vertical = 0
+text = "5"
+script = ExtResource("3_d4dfr")
+buttonNumber = 5
+boardController = NodePath("../../BoardController")
+
+[node name="Button6" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 230.0
+offset_top = -44.0
+offset_right = 276.0
+grow_vertical = 0
+text = "6"
+script = ExtResource("3_d4dfr")
+buttonNumber = 6
+boardController = NodePath("../../BoardController")
+
+[node name="Button7" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 276.0
+offset_top = -44.0
+offset_right = 322.0
+grow_vertical = 0
+text = "7"
+script = ExtResource("3_d4dfr")
+buttonNumber = 7
+boardController = NodePath("../../BoardController")
+
+[node name="Button8" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 322.0
+offset_top = -44.0
+offset_right = 368.0
+grow_vertical = 0
+text = "8"
+script = ExtResource("3_d4dfr")
+buttonNumber = 8
+boardController = NodePath("../../BoardController")
+
+[node name="Button9" type="Button" parent="CanvasLayer" node_paths=PackedStringArray("boardController")]
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 368.0
+offset_top = -44.0
+offset_right = 414.0
+grow_vertical = 0
+text = "9"
+script = ExtResource("3_d4dfr")
+buttonNumber = 9
+boardController = NodePath("../../BoardController")
